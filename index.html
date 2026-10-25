@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Jhared.dev: portfolio of a 15-year-old aspiring web developer and prompt engineer.">
+<title>Jhared.dev | Aspiring Web Developer &amp; Prompt Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a href="#home" class="logo" aria-label="Jhared.dev, back to home">Jhared<span>.dev</span></a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">☰</button>
+    <ul class="links" id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#prompt-lab">Prompt Lab</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li class="auth" id="loggedOut"><button class="btn small" id="openAuth" type="button">Log in</button></li>
+     <li class="auth" id="loggedIn" hidden><span id="userName"></span> <button class="btn small" id="logoutBtn" type="button">Log out</button></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section id="home" class="hero-section">
+  <canvas id="cloud" aria-hidden="true"></canvas>
+  <div class="wrap hero">
+    <div class="hero-text">
+      <span class="badge"><i aria-hidden="true"></i>Currently Learning &amp; Building</span>
+      <h1>Hi, I’m Jhared</h1>
+      <p class="title">Aspiring Web Developer &amp; Prompt Engineer</p>
+      <p>I’m a 15-year-old developer learning to build modern websites with HTML, CSS, and JavaScript. I’m also exploring prompt engineering and discovering how AI can help turn ideas into digital experiences.</p>
+      <div class="btns">
+        <a class="btn primary" href="#about">About Me</a>
+        <a class="btn" href="#journey">Explore My Journey</a>
+      </div>
+    </div>
+
+    <div class="editor" role="img" aria-label="Code editor showing a sample JavaScript object about Jhared">
+      <div class="editor-bar"><span></span><span></span><span></span><em>jhared.js</em></div>
+<pre><code><span class="c">// my story so far</span>
+<span class="k">const</span> <span class="v">jhared</span> = {
+  <span class="p">age</span>: <span class="n">15</span>,
+  <span class="p">learning</span>: [<span class="s">"HTML"</span>, <span class="s">"CSS"</span>, <span class="s">"JavaScript"</span>],
+  <span class="p">exploring</span>: <span class="s">"Prompt Engineering"</span>,
+  <span class="f">build</span>() {
+    <span class="k">return</span> <span class="s">"my first real project"</span>;
+  }
+};</code></pre>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap reveal">
+    <h2>A Little About Me</h2>
+    <p class="lead">I’m a beginner who knows the fundamentals of HTML, CSS, and JavaScript. My goal is to become a professional web developer and prompt engineer.</p>
+    <p>I’m interested in making websites, applications, games, and AI-powered tools. This is my first portfolio, and I haven’t finished any personal projects yet. I’d rather show you where I really am than pretend to be further along.</p>
+    <div class="grid three">
+      <article class="card"><h3>Learning to Code</h3><p>Practicing HTML, CSS, and JavaScript a little more every day.</p></article>
+      <article class="card"><h3>Exploring AI</h3><p>Finding out how to write clear prompts that get useful results.</p></article>
+      <article class="card"><h3>Building My Future</h3><p>Working toward a career creating things people use.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="wrap reveal">
+    <h2>Skills</h2>
+    <p class="lead">What I’m working with right now. No percentages, just honest labels.</p>
+    <div class="grid four">
+      <article class="card skill"><b class="ico" aria-hidden="true">&lt;/&gt;</b><h3>HTML</h3><span class="tag">Foundation</span></article>
+      <article class="card skill"><b class="ico" aria-hidden="true">{ }</b><h3>CSS</h3><span class="tag">Foundation</span></article>
+      <article class="card skill"><b class="ico" aria-hidden="true">JS</b><h3>JavaScript</h3><span class="tag">Foundation</span></article>
+      <article class="card skill"><b class="ico" aria-hidden="true">✦</b><h3>Prompt Engineering</h3><span class="tag dev">Developing interest</span></article>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="wrap reveal">
+    <h2>Things I’ll Build</h2>
+    <div class="empty" id="emptyProjects">
+      <p>Every developer starts somewhere. I’m learning, experimenting, and preparing to build my first projects.</p>
+      <div class="grid four" id="ideas">
+        <article class="card idea"><span class="tag">Future idea</span><h3>Personal Portfolio</h3></article>
+        <article class="card idea"><span class="tag">Future idea</span><h3>Interactive JavaScript App</h3></article>
+        <article class="card idea"><span class="tag">Future idea</span><h3>Browser Game</h3></article>
+        <article class="card idea"><span class="tag">Future idea</span><h3>AI-Powered Tool</h3></article>
+      </div>
+    </div>
+    <!-- Real project cards appear here once you add them to the "projects" list in script.js -->
+    <div class="grid three" id="projectsGrid"></div>
+  </div>
+</section>
+
+<!-- PROMPT LAB -->
+<section id="prompt-lab">
+  <div class="wrap reveal">
+    <h2>Prompt Lab</h2>
+    <p class="lead">Examples of how I’m learning to write prompts. These are practice samples, not results from real client work.</p>
+    <div class="grid two">
+      <article class="card prompt">
+        <span class="tag">Example: simple prompt</span>
+        <pre id="p1">Explain how a CSS flexbox works to a beginner. Use one short example and keep it under 150 words.</pre>
+        <button class="btn small" data-copy="p1">Copy prompt</button>
+      </article>
+      <article class="card prompt">
+        <span class="tag">Example: structured prompt</span>
+        <pre id="p2">Role: You are a friendly JavaScript tutor.
+Task: Review my function and explain any bugs.
+Context: I’m a beginner who knows variables and loops.
+Format: Give 3 bullet points, then a fixed version.</pre>
+        <button class="btn small" data-copy="p2">Copy prompt</button>
+      </article>
+      <article class="card prompt">
+        <span class="tag">Example: improving a prompt</span>
+        <pre id="p3">Weak: "Make me a website."
+Better: "Suggest a simple layout for a one-page portfolio with a header, an about section, and a contact link. Use plain HTML and CSS."</pre>
+        <button class="btn small" data-copy="p3">Copy prompt</button>
+      </article>
+      <article class="card prompt">
+        <span class="tag">Example: checking AI answers</span>
+        <pre id="p4">Explain your answer step by step, then list one way I could test that it works.</pre>
+        <button class="btn small" data-copy="p4">Copy prompt</button>
+      </article>
+    </div>
+    <p class="status" id="copyStatus" role="status" aria-live="polite"></p>
+  </div>
+</section>
+
+<!-- JOURNEY -->
+<section id="journey">
+  <div class="wrap reveal">
+    <h2>Learning Journey</h2>
+    <p class="lead">Where I am now, and where I’m headed.</p>
+    <ol class="timeline">
+      <li class="now"><span class="tag">Now</span><h3>Learning the fundamentals</h3><p>Getting comfortable with HTML and CSS.</p></li>
+      <li class="now"><span class="tag">Now</span><h3>Improving JavaScript</h3><p>Practicing logic, events, and working with the page.</p></li>
+      <li class="now"><span class="tag">Now</span><h3>Experimenting with AI prompts</h3><p>Testing how wording changes the answers I get.</p></li>
+      <li class="goal"><span class="tag">Goal</span><h3>Building my first real project</h3><p>Something small that I finish and share.</p></li>
+      <li class="goal"><span class="tag">Goal</span><h3>Becoming a professional</h3><p>Web developer and prompt engineer.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap reveal">
+    <h2>Contact</h2>
+    <p class="lead">Want to say hi or share advice? Reach out.</p>
+    <div class="btns" id="contactLinks"></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a href="#home" class="logo">Jhared<span>.dev</span></a>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#prompt-lab">Prompt Lab</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <ul id="footSocials"></ul>
+      <button class="btn small" id="toTop">Back to top</button>
+    </div>
+    <p class="copy">© <span id="year"></span> Jhared.dev</p>
+  </div>
+</footer>
+
+<dialog id="authDialog" aria-labelledby="authTitle">
+  <button class="close" id="closeAuth" type="button" aria-label="Close">✕</button>
+  <h2 id="authTitle">Log in</h2>
+  <div class="tabs">
+    <button type="button" id="tabLogin" class="active">Log in</button>
+    <button type="button" id="tabSignup">Sign up</button>
+  </div>
+  <form id="authForm" novalidate>
+    <label id="nameRow" hidden>Name <input id="authName" autocomplete="name"></label>
+    <label>Email <input id="authEmail" type="email" autocomplete="email" required></label>
+   <label>Password
+  <span class="pass-wrap">
+    <input id="authPass" type="password" autocomplete="current-password" required>
+    <button type="button" id="togglePass" class="eye" aria-label="Show password">
+      <svg class="open" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+      <svg class="off" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+    </button>
+  </span>
+</label>
+    <button class="btn primary" type="submit" id="authSubmit">Log in</button>
+    <button type="button" class="linkbtn" id="forgot">Forgot password?</button>
+    <p class="msg" id="authMsg" role="status" aria-live="polite"></p>
+  </form>
+</dialog>
+
+<script src="script.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="auth.js"></script>
+</body>
+</html>
